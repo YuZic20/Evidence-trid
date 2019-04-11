@@ -1,0 +1,42 @@
+﻿<Window x:Class="EvidenceWPF_Databaze.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EvidenceWPF_Databaze"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0">
+                <Rectangle Height="18" Fill="Gray"></Rectangle>
+                <TextBox Name="TextBoxClass"></TextBox>
+                <Button Click="Button_Click_Add_ClassRoom">Přidat třídu</Button>
+                <Button Click="Button_Click_Remove_ClassRoom">Odebrat vybranou třídu</Button>
+                <Button Click="Button_Click_Update_Class">Upravit vybranou třídu</Button>
+                <Label></Label>
+                <StackPanel Name="ClassRooms">
+                    <Button Click="Button_Click_ClassRoom_Select">3Ita</Button>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <TextBox Name="TextBoxItemsName"></TextBox>
+                <TextBox Name="TextBoxItemsCost"></TextBox>
+                <Button Click="Button_Click_Add_Item">Přidat Položku</Button>
+                <Button Click="Button_Click_Remove_Item">Odebrat vybranou položku</Button>
+                <Button Click="Button_Click_Update_Item">Upravit vybranou položku</Button>
+                <Label></Label>
+                <StackPanel Name="Items">
+                    <Button>Židle 252kč</Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
